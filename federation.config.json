@@ -1,0 +1,6 @@
+{
+  "name": "client-shell",
+  "remotes": {
+    "sso_ui": "sso_ui@http://localhost:8001/remoteEntry.js"
+  }
+}
