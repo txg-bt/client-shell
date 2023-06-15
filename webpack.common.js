@@ -41,7 +41,7 @@ module.exports = {
     }),
   ],
   output: {
-    filename: '[name].bundle.js',
+    filename: 'client_[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
@@ -64,6 +64,18 @@ module.exports = {
         test: /\.js?$/,
         loader: 'babel-loader',
         exclude: /node_modules/,
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'images/', // Update with your desired output directory for images
+            },
+          },
+        ],
       },
     ],
   },

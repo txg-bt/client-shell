@@ -9,7 +9,6 @@ module.exports = merge(common, {
   cache: false,
   optimization: {
     minimize: false,
-    splitChunks: false,
   },
   devServer: {
     static: {
